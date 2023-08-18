@@ -1,0 +1,56 @@
+﻿@model AdedonhaMVC.ViewsModel.CategoriaViewModel
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Palavras com a letra <b>"@ViewBag.Letra"</b></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="/Categorias/Index">Categorias</a></li>
+                    <li class="breadcrumb-item"><a href="/Categorias/Letras?id=@Model.Id">Letras</a></li>
+                    <li class="breadcrumb-item active">Palavras Por Letra</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="card card-light" style="margin:16px;">
+    <div class="card-header">
+        <h3 class="card-title">Palavras</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped projects" id="tabela">
+            <thead>
+                <tr class="text-lg">
+                    <th style="width: 20%">
+                        Descrição
+                    </th>
+                    <th style="width: 80%">
+                        Informação
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Palavras)
+                {
+                     <tr>
+                          <td>
+                             <a>
+                              @Html.DisplayFor(modelItem => item.Descricao)
+                             </a>
+                          </td>
+                          <td>
+                              <a>
+                               @Html.DisplayFor(modelItem => item.Informacao)
+                              </a>
+                          </td>
+                      </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

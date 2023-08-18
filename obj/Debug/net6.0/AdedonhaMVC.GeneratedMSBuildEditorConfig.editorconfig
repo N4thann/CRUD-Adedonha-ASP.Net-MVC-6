@@ -1,0 +1,108 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AdedonhaMVC
+build_property.RootNamespace = AdedonhaMVC
+build_property.ProjectDir = D:\NATHAN\C#\AdedonhaMVC\AdedonhaMVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\NATHAN\C#\AdedonhaMVC\AdedonhaMVC
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/AdicionarPalavras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xBZGljaW9uYXJQYWxhdnJhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/Letras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xMZXRyYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Categorias/PalavrasPorLetra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xQYWxhdnJhc1BvckxldHJhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Palavras/AdicionarCategorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFsYXZyYXNcQWRpY2lvbmFyQ2F0ZWdvcmlhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Palavras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFsYXZyYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Palavras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFsYXZyYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Palavras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFsYXZyYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Palavras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFsYXZyYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Palavras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFsYXZyYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Shared/_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NATHAN/C\#/AdedonhaMVC/AdedonhaMVC/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-gwe40f0ipr

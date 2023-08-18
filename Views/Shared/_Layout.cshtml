@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Adedonha</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/adminlte/dist/css/adminlte.min.css">
+
+    @await RenderSectionAsync("Scripts", required: false)
+</head>
+<body class="hold-transition sidebar-mini dark-mode" data-panel-auto-height-mode="height">
+
+    <partial name="_Navbar" />
+
+    <partial name="_Sidebar" />
+
+    <div class="content-wrapper" style="flex-grow: 1; overflow-y: auto; padding-bottom: 16px;">
+        <!-- Main content -->
+        <section class="content">
+            <div class="wrapper">
+                @RenderBody()
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+
+    <partial name="_Footer" />
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="~/adminlte/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/adminlte/dist/js/adminlte.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="~/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="~/adminlte/plugins/datatables-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-fixedheader/js/fixedHeader.bootstrap4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="~/adminlte/plugins/datatables-fixedcolumns/js/dataTables.fixedColumns.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-fixedcolumns/js/fixedColumns.bootstrap4.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script>
+        $(function () {
+            $('#tabela').DataTable({
+                "language": {
+                    "decimal": "",
+                    "emptyTable": "Nenhum registro encontrado",
+                    "info": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                    "infoEmpty": "Mostrando 0 até 0 de 0 registros",
+                    "infoFiltered": "(Filtrados de _MAX_ registros)",
+                    "infoPostFix": "",
+                    "thousands": ".",
+                    "lengthMenu": "Mostrar _MENU_ resultados por página",
+                    "loadingRecords": "Carregando...",
+                    "processing": "Processando...",
+                    "search": "Pesquisar:",
+                    "zeroRecords": "Nenhum registro encontrado",
+                    "paginate": {
+                        "first": "Primeiro",
+                        "last": "Último",
+                        "next": "Próximo",
+                        "previous": "Anterior"
+                    },
+                    "aria": {
+                        "sortAscending": ": Ordenar colunas de forma ascendente",
+                        "sortDescending": ": Ordenar colunas de forma descendente"
+                    }
+                },
+                "lengthMenu": [10, 25, 50, 100],
+                "responsive": true,
+                "ordering": true,
+                "lengthChange": true,
+                "autoWidth": false
+            });
+        });</script>
+</body>
+</html>
+
+
+

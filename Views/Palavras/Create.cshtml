@@ -1,0 +1,54 @@
+﻿@model AdedonhaMVC.ViewsModel.PalavraViewModel
+
+<section class="content-header" style="margin:16px;">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Adicionar um novo registro</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item active">Adicionar um novo registro</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content" style="margin:16px;">
+    <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="card card-light">
+                    <div class="card-header">
+                        <h3 class="card-title">Palavra</h3>
+                    </div>
+                    <form asp-action="Create">
+                        <div class="card-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><ion-icon name="create-sharp"></ion-icon></span>
+                                </div>
+                                <input asp-for="Descricao" class="form-control" placeholder="Descrição da Palavra">
+                                <span asp-validation-for="Descricao" class="text-danger"></span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><ion-icon name="create-sharp"></ion-icon></span>
+                                </div>
+                                <input asp-for="Informacao" class="form-control" placeholder="Informações sobre a palavra">
+                                <span asp-validation-for="Informacao" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="card-footer"> 
+                            <input type="submit" value="Salvar" class="btn btn-danger" />
+                            <a asp-action="Index" class="btn btn-danger float-right">Voltar para a página anterior</a>
+                        </div>               
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+    </div>
+</section>

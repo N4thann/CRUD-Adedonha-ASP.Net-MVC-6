@@ -1,0 +1,370 @@
+﻿@model AdedonhaMVC.Models.Categoria
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>@Html.DisplayFor(model => model.Descricao)</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="/Categorias/Index">Categorias</a></li>
+                    <li class="breadcrumb-item active">@Html.DisplayFor(model => model.Descricao)</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content" style="margin:16px;">
+    <!-- Primeira Coluna de Letras -->
+    <div class="row">
+        <div class="col-lg-2 col-6">
+            <div class="small-box bg-maroon">
+                <div class="inner">
+                    <h3>A</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_A</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <a  href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=A" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+            <div class="small-box bg-maroon">
+                <div class="inner">
+                    <h3>B</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_B</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=B" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+            <div class="small-box bg-maroon">
+                <div class="inner">
+                    <h3>C</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_C</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=C" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+            <div class="small-box bg-maroon">
+                <div class="inner">
+                    <h3>D</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_D</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=D" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+            <div class="small-box bg-maroon">
+                <div class="inner">
+                    <h3>E</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_E</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=E" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+            <div class="small-box bg-maroon">
+                <div class="inner">
+                    <h3>F</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_F</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=F" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Segunda Coluna de Letras -->
+    <div class="row">
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>G</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_G</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=G" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>H</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_H</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=H" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>I</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_I</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=I" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>J</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_J</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=J" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>K</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_K</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=K" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6">
+                <div class="small-box bg-maroon">
+                    <div class="inner">
+                        <h3>L</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_L</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=L" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+    </div>
+
+    <!-- Terceira Coluna de Letras -->
+    <div class="row">
+                <div class="col-lg-2 col-6">
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h3>M</h3>
+
+                            <p>Nº de palavras: @ViewBag.Soma_M</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=M" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h3>N</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_N</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=N" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h3>O</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_O</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=O" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h3>P</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_P</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=P" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h3>Q</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_Q</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=Q" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h3>R</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_R</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=R" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+    </div>
+
+    <!-- Quarta Coluna de Letras -->
+    <div class="row">
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>S</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_S</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=S" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>T</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_T</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=T" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>U</h3>
+
+                                <p>Nº de palavras: @ViewBag.Soma_U</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=U" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>V</h3>
+
+                                <p>Nº de palavras: @ViewBag.Soma_V</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=V" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>Y</h3>
+
+                                <p>Nº de palavras: @ViewBag.Soma_Y</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=Y" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>Z</h3>
+
+                        <p>Nº de palavras: @ViewBag.Soma_Z</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=Z" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+    </div>  
+</div>
+
+

@@ -1,0 +1,51 @@
+﻿@model AdedonhaMVC.Models.Categoria
+
+<section class="content-header" style="margin:16px;">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Deletar a categoria <b>"@Html.DisplayFor(model => model.Descricao)"</b></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="/Categorias/Index">Categorias</a></li>
+                    <li class="breadcrumb-item active">Deletar registro</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content" style="margin:16px;">
+    <div class="container-fluid">
+                <div class="card card-light">
+                    <div class="card-header">
+                        <h3 class="card-title">@Html.DisplayFor(model => model.Descricao)</h3>
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class = "col-sm-4">
+                                Descrição:
+                            </dt>
+                             <dd class = "col-sm-8">
+                                @Html.DisplayFor(model => model.Descricao)
+                            </dd>
+                            <dt class = "col-sm-4">
+                                Número total de palavras:
+                             </dt>
+                            <dd class = "col-sm-8">
+                                @Html.DisplayFor(model => model.TotalPalavras)
+                            </dd>
+                         </dl> 
+                     </div> 
+                     <div class="card-footer">
+                         <form asp-action="Delete">
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Deletar" class="btn btn-danger" />
+                            <a asp-action="Index" class="btn btn-danger float-right">Voltar para a página anterior</a>
+                         </form>
+                     </div>                    
+                </div>               
+      </div>
+</section>

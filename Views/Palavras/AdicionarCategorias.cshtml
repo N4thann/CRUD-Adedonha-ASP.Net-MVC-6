@@ -1,0 +1,152 @@
+﻿@model AdedonhaMVC.ViewsModel.PalavraViewModel
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Adicionar categorias a palavra <b>"@Html.DisplayFor(model => model.Descricao)"</b></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="/Palavras/Index">Palavras</a></li>
+                    <li class="breadcrumb-item active">Adicionar Categorias</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content" style="margin:16px;">
+<div class="row">
+    <div class="col-6">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">Adicionar categorias:</h3>
+
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" id="tabela1" name="table-filter1" class="form-control float-right" placeholder="Search">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body table-responsive p-0" style="height: 600px;">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th style="width: 80%">Descrição</th>
+                                <th style="width: 20%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.CategoriasDisponiveis)
+                        {
+                              <form asp-action="SalvarCategorias">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+                                 <tr>
+                                    <td class="table-filter1">@item.Descricao</td>
+                                        <td class="text-right py-0 align-middle">
+                                             <input type="hidden" asp-for="IdCategoria" value="@item.Id" />
+                                                 <button type="submit" class="btn btn-danger"><i class="fas fa-plus"></i></button>
+                                        </td>
+                                 </tr>
+                              </form>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">A palavra <b>"@Html.DisplayFor(model => model.Descricao)"</b> possui as categorias:</h3>
+
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" id="tabela2" name="table-filter2" class="form-control float-right" placeholder="Procurar">
+
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body table-responsive p-0" style="height: 600px;">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th style="width: 80%">
+                                    Descrição
+                                </th>
+                                <th style="width: 20%">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model.Categorias)
+                        {
+                            <form asp-action="RemoverCategorias">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+                                <tr>
+                                  <td class="table-filter2">@item.Descricao</td>
+                                  <td class="project-actions text-right">
+                                          <input type="hidden" asp-for="IdCategoria" value="@item.Id" />
+                                          <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>                                                                   
+                                  </td>
+                                 </tr>
+                           </form>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tableSearchInput = document.getElementById('tabela1');
+        var tableFilterItems = document.getElementsByClassName('table-filter1');
+
+        tableSearchInput.addEventListener('input', function () {
+            var searchText = tableSearchInput.value.toLowerCase();
+
+            Array.prototype.forEach.call(tableFilterItems, function (item) {
+                var itemText = item.textContent.toLowerCase();
+                var row = item.parentNode;
+                row.style.display = itemText.includes(searchText) ? '' : 'none';
+            });
+        });
+    });
+</script>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tableSearchInput = document.getElementById('tabela2');
+        var tableFilterItems = document.getElementsByClassName('table-filter2');
+
+        tableSearchInput.addEventListener('input', function () {
+            var searchText = tableSearchInput.value.toLowerCase();
+
+            Array.prototype.forEach.call(tableFilterItems, function (item) {
+                var itemText = item.textContent.toLowerCase();
+                var row = item.parentNode;
+                row.style.display = itemText.includes(searchText) ? '' : 'none';
+            });
+        });
+    });
+</script>

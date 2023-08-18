@@ -1,0 +1,301 @@
+﻿@model AdedonhaMVC.ViewsModel.CategoriaViewModel
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Adicionar palavras a categoria <b>"@Html.DisplayFor(model => model.Descricao)"</b></h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="/Categorias/Index">Categorias</a></li>
+                    <li class="breadcrumb-item active">Adicionar Palavras</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content" style="margin:16px;">
+    <div class="row">
+        <div class="col-3">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">Adicionar palavras:</h3>
+
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" id="tabela1" name="table-filter1" class="form-control float-right" placeholder="Search">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body table-responsive p-0" style="height: 600px;">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th style="width: 80%">Descrição</th>
+                                <th style="width: 20%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.PalavrasDisponiveis)
+                            {
+                                <form asp-action="SalvarPalavras">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" asp-for="Id" />
+                                    <tr>
+                                        <td class="table-filter1">@item.Descricao</td>
+                                        <td class="text-right py-0 align-middle">
+                                            <input type="hidden" asp-for="IdPalavra" value="@item.Id" />
+                                                <button type="submit" class="btn btn-danger"><i class="fas fa-plus"></i></button>
+                                        </td>
+                                    </tr>
+                                </form>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">A categoria <b>"@Html.DisplayFor(model => model.Descricao)"</b> possui as palavras:</h3>
+
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" id="tabela2" name="table-filter2" class="form-control float-right" placeholder="Procurar">
+
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body table-responsive p-0" style="height: 600px;">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th style="width: 80%">
+                                    Descrição
+                                </th>
+                                <th style="width: 20%">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Palavras)
+                            {
+                                <form asp-action="RemoverPalavras">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" asp-for="Id" />
+                                    <tr>
+                                        <td class="table-filter2">@item.Descricao</td>
+                                        <td class="project-actions text-right">                            
+                                              <input type="hidden" asp-for="IdPalavra" value="@item.Id" />
+                                              <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>                                                                   
+                                         </td>                    
+                                    </tr>
+                                </form>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">Número de Palavras por Letra</h3>
+
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" id="tabela3" name="table-filter3" class="form-control float-right" placeholder="Procurar">
+
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body table-responsive p-0" style="height: 600px;">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th style="width: 80%">
+                                    Letra
+                                </th>
+                                <th style="width: 80%">
+                                    Número de Palavras
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                <td class="table-filter3">A</td>
+                                    <td>@ViewBag.Soma_A</td>
+                                </tr>
+                            <tr>
+                                <td class="table-filter3">B</td>
+                                <td>@ViewBag.Soma_B</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">C</td>
+                                <td>@ViewBag.Soma_C</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">D</td>
+                                <td>@ViewBag.Soma_D</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">E</td>
+                                <td>@ViewBag.Soma_E</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">F</td>
+                                <td>@ViewBag.Soma_F</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">G</td>
+                                <td>@ViewBag.Soma_G</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">H</td>
+                                <td>@ViewBag.Soma_H</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">I</td>
+                                <td>@ViewBag.Soma_I</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">J</td>
+                                <td>@ViewBag.Soma_J</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">K</td>
+                                <td>@ViewBag.Soma_K</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">L</td>
+                                <td>@ViewBag.Soma_L</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">M</td>
+                                <td>@ViewBag.Soma_M</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">N</td>
+                                <td>@ViewBag.Soma_N</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">O</td>
+                                <td>@ViewBag.Soma_O</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">P</td>
+                                <td>@ViewBag.Soma_P</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">Q</td>
+                                <td>@ViewBag.Soma_Q</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">R</td>
+                                <td>@ViewBag.Soma_R</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">S</t>
+                                <td>@ViewBag.Soma_S</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">T</td>
+                                <td>@ViewBag.Soma_T</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">U</td>
+                                <td>@ViewBag.Soma_U</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">V</td>
+                                <td>@ViewBag.Soma_V</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">Y</td>
+                                <td>@ViewBag.Soma_Y</td>
+                            </tr>
+                            <tr>
+                                <td class="table-filter3">Z</td>
+                                <td>@ViewBag.Soma_Z</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tableSearchInput = document.getElementById('tabela1');
+        var tableFilterItems = document.getElementsByClassName('table-filter1');
+
+        tableSearchInput.addEventListener('input', function () {
+            var searchText = tableSearchInput.value.toLowerCase();
+
+            Array.prototype.forEach.call(tableFilterItems, function (item) {
+                var itemText = item.textContent.toLowerCase();
+                var row = item.parentNode;
+                row.style.display = itemText.includes(searchText) ? '' : 'none';
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tableSearchInput = document.getElementById('tabela2');
+        var tableFilterItems = document.getElementsByClassName('table-filter2');
+
+        tableSearchInput.addEventListener('input', function () {
+            var searchText = tableSearchInput.value.toLowerCase();
+
+            Array.prototype.forEach.call(tableFilterItems, function (item) {
+                var itemText = item.textContent.toLowerCase();
+                var row = item.parentNode;
+                row.style.display = itemText.includes(searchText) ? '' : 'none';
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tableSearchInput = document.getElementById('tabela3');
+        var tableFilterItems = document.getElementsByClassName('table-filter3');
+
+        tableSearchInput.addEventListener('input', function () {
+            var searchText = tableSearchInput.value.toLowerCase();
+
+            Array.prototype.forEach.call(tableFilterItems, function (item) {
+                var itemText = item.textContent.toLowerCase();
+                var row = item.parentNode;
+                row.style.display = itemText.includes(searchText) ? '' : 'none';
+            });
+        });
+    });
+</script>

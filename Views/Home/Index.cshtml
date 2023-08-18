@@ -1,0 +1,77 @@
+﻿@model IEnumerable<AdedonhaMVC.Models.Categoria>
+
+<section class="content" style="margin: 16px;">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">Sobre o Adedonha</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body table-responsive p-2 text-lg" style="height: 600px;">
+                    Stop! é um jogo que combina vocabulário, escrita e conhecimentos gerais.
+                    No Brasil também é conhecido por Adedonha! ou Adedonha!
+                    O jogo consiste em escrever palavras que iniciam com uma letra combinada, dentro de categorias pré definidas (como nome, cor, objeto, etc).
+                    Sabe-se que Stop! era jogado desde o século XIX na Alemanha.
+                    Nos Estados Unidos o jogo recebe o nome de Town, Country, River (Cidade, País, Rio, que eram as categorias originais de palavras) e na Alemanha recebe o nome de Stadt, Land, Fluss.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">Categorias</h3>
+                    <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" id="tabela1" name="table-filter1" class="form-control float-right" placeholder="Search">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body table-responsive p-0 text-lg" style="height: 600px;">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th style="width: 1%">
+                                    #
+                                </th>
+                                <th style="width: 20%">
+                                    Descrição
+                                </th>
+                                <th style="width: 20%">
+                                    Total de Palavras
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        #
+                                    </td>
+                                    <td class="table-filter1">
+                                        <a>
+                                            @Html.DisplayFor(modelItem => item.Descricao)
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a>
+                                            @Html.DisplayFor(modelItem => item.TotalPalavras)
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

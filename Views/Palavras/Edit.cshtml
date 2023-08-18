@@ -1,0 +1,52 @@
+﻿@model AdedonhaMVC.ViewsModel.PalavraViewModel
+
+<!--CABEÇALHO-->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Editar</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/Home/Index">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="/Palavras/Index">Palavras</a></li>
+                    <li class="breadcrumb-item active">Editar Palavra</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content" style="margin:16px;">
+    <div class="card card-light">
+        <div class="card-header">
+            <h3 class="card-title">Palavra</h3>
+        </div>
+        <form asp-action="Edit">
+        <div class="card-body p-0">
+            <!-- adição do "p-0" para distanciar das bordas -->           
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group" style="margin-top: 20px; margin-left: 10px; margin-right: 10px;">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <input asp-for="Descricao" class="form-control" />
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="margin-top: 20px; margin-left: 10px; margin-right: 10px;">
+                    <label asp-for="Informacao" class="control-label"></label>
+                    <input asp-for="Informacao" class="form-control" />
+                    <span asp-validation-for="Informacao" class="text-danger"></span>
+                </div>
+                <div class="card-footer"> 
+                     <input type="submit" value="Salvar" class="btn btn-danger" />
+                     <a asp-action="Index" class="btn btn-danger float-right">Voltar para a página anterior</a>
+                </div>   
+        </div>
+        </form>
+    </div>
+</section>
+
+
+
+
