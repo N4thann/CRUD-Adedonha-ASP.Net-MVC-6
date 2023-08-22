@@ -1,4 +1,4 @@
-# Adedonha-ASP.Net-6
+# CRUD-Adedonha-ASP.Net-6
 Esse projeto pessoal tem como objetivo ser uma ferramenta para pesquisar palavras por letra de diversas categorias, deixando os jogadores mais preparados. É possível também cadastrar Categorias e Palavras, 
 utilizando relacionamento de muitos para muitos sendo possível
 adicionar palavras em categorias e vice-versa. 
