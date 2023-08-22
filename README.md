@@ -1,10 +1,5 @@
 # CRUD-Adedonha-ASP.Net-6
-Esse projeto pessoal tem como objetivo ser uma ferramenta para pesquisar palavras por letra de diversas categorias, deixando os jogadores mais preparados. É possível também cadastrar Categorias e Palavras, 
-utilizando relacionamento de muitos para muitos sendo possível
-adicionar palavras em categorias e vice-versa. 
-O Back-End foi o foco desse projeto tornando possível utilizar diversas funcionalidades no sistema como 
-pesquisar categorias e palavras que começam com uma determinada letra. 
-O Back-End se utilizou do ASP.Net 6 utilizando o padrão MVC, utilizando Entity Framework 6 com consultas LINQ.
-O Banco de dados utilizado foi o SQL Server, foi desenvolvido diversos comandos SQL para testar a aplicação.
-Utilizei o conceito de code-first com Entity Framework para criar o Banco de Dados.
+O jogo adedonha é bastante popular e divertido. Esse sistema sendo um CRUD completo permiti cadastrar categorias e palavras e fazer o relacionamento entre essas duas entidades. O projeto visa ser um repositório para pesquisar palavras por categoria para ir bem no jogo. As funcionalidades envolvem pesquisar todas as palavras e categorias, bem como pesquisar palavras por letra, tendo um design mas voltado para o administrativo. O projeto foi feito utilizando o
+ASP.Net 6 no padrão MVC. Utilizei o conceito de code-first com Entity Framework para criar o Banco de Dados.
+O Banco de Dados foi gerenciado no SQL Server onde foi possível testar alimentar e gerenciar a base de dados com SQL.
 No front-end foi utilizado Páginas Razor com o tamplate Admin Lte 3.2.
