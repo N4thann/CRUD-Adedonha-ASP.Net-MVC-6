@@ -68,11 +68,14 @@ namespace AdedonhaMVC.Controllers
                 Palavra palavra = new Palavra();
                 palavra.Id = palavraCVM.Id;
                 palavra.Descricao = palavraCVM.Descricao;
-                palavra.Informacao = palavraCVM.Informacao;
-
-                if(palavra.Informacao == null)
+                
+                if(palavraCVM.Informacao == null)
                 {
                     palavra.Informacao = "Sem Informação";
+                }
+                else
+                {
+                    palavra.Informacao = palavraCVM.Informacao;
                 }
 
                 _context.Add(palavra);

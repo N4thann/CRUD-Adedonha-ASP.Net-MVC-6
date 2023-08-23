@@ -18,4 +18,3 @@ dotnet-ef database update
 ```
 
 Execute o programa.
-
