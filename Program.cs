@@ -3,11 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var configuration = new ConfigurationBuilder()
+  .AddJsonFile("appsettings.json")
+  .Build();
+
+var connectionString = configuration["ConnectionStrings:AdedonhaMVC"];
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
-    (options => options.UseSqlServer("Data Source=DESKTOP-JTHDJFE\\SQLSERVER;Initial Catalog=AdedonhaMVC2;Integrated Security=True;TrustServerCertificate=True"));
+    (options => options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
