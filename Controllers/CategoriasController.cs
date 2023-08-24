@@ -139,7 +139,7 @@ namespace AdedonhaMVC.Controllers
             var categoria = _context.Categorias.Include(p => p.ListaDePalavras)
                 .ToList().FirstOrDefault(g => g.Id == id);
 
-            if (id == null || _context.Categorias == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -212,7 +212,7 @@ namespace AdedonhaMVC.Controllers
             var categoria = _context.Categorias.Include(p => p.ListaDePalavras)
                 .ToList().FirstOrDefault(g => g.Id == id);
 
-            if (id == null || _context.Categorias == null)
+            if (id == null)
             {
                 return NotFound();
             }

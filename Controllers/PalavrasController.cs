@@ -60,9 +60,6 @@ namespace AdedonhaMVC.Controllers
         public async Task<IActionResult> Create(PalavraCreateViewModel palavraCVM)
         {
 
-            ModelState.Remove("Categorias");
-            ModelState.Remove("CategoriasDisponiveis");
-
             if (ModelState.IsValid)
             {
                 Palavra palavra = new Palavra();
@@ -91,7 +88,7 @@ namespace AdedonhaMVC.Controllers
             var palavra = _context.Palavras.Include(p => p.ListaDeCategorias)
                 .ToList().FirstOrDefault(g => g.Id == id);
 
-            if (id == null || _context.Palavras == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -156,7 +153,7 @@ namespace AdedonhaMVC.Controllers
             var palavra = _context.Palavras.Include(p => p.ListaDeCategorias)
                 .ToList().FirstOrDefault(g => g.Id == id);
 
-            if (id == null || _context.Palavras == null)
+            if (id == null)
             {
                 return NotFound();
             }
