@@ -168,26 +168,26 @@ namespace AdedonhaMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(CategoriaViewModel categoriaVM)
         {
-            var categoria = await _context.Categorias.
-                FirstOrDefaultAsync(m => m.Id == categoriaVM.Id);
-
-            if (categoria == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                categoria.Descricao = categoriaVM.Descricao;
-            }
 
             ModelState.Remove("Palavras");
             ModelState.Remove("PalavrasDisponiveis");
 
             if (ModelState.IsValid)
             {
+                var categoria = new Categoria
+                {
+                    Id = categoriaVM.Id,
+                    Descricao = categoriaVM.Descricao
+                };
+
+                //O Entry faz parte do gerenciamento de entidades do Entity Framework
+                // O método Entry permite acessar um objeto EntityEntry que representa
+                //a entidade no contexto e fornece métodos para controlar seu estado.
+                //Modified: A entidade já existe no banco de dados e foi modificada.
+                _context.Entry(categoria).State = EntityState.Modified;
+
                 try
                 {
-                    _context.Update(categoria);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
