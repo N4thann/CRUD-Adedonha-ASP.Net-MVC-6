@@ -1,4 +1,4 @@
-namespace AdedonhaMVC.Models
+namespace AdedonhaMVC.Features.Home
 {
     public class ErrorViewModel
     {

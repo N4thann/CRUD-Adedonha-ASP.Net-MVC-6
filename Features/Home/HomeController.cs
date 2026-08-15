@@ -1,10 +1,9 @@
-﻿using AdedonhaMVC.Data;
-using AdedonhaMVC.Models;
+﻿using AdedonhaMVC.Common.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
-namespace AdedonhaMVC.Controllers
+namespace AdedonhaMVC.Features.Home
 {
     public class HomeController : Controller
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace AdedonhaMVC.ViewsModel
+namespace AdedonhaMVC.Features.Palavras
 {
     public class PalavraCreateViewModel
     {

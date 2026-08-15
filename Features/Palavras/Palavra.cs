@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using AdedonhaMVC.Features.Categorias;
 
-namespace AdedonhaMVC.Models
+namespace AdedonhaMVC.Features.Palavras
 {
     [Table("Palavra")]
     public class Palavra

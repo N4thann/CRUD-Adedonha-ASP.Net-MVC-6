@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AdedonhaMVC.ViewsModel
+namespace AdedonhaMVC.Features.Categorias
 {
     public class CategoriaCreateViewModel
     {

@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace AdedonhaMVC.Migrations
+namespace AdedonhaMVC.Common.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class correçãodoatributoInformacaodatabelaPalavra : Migration
+    public partial class APICarros : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

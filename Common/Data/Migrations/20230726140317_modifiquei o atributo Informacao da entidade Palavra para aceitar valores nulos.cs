@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace AdedonhaMVC.Migrations
+namespace AdedonhaMVC.Common.Data.Migrations
 {
     /// <inheritdoc />
     public partial class modifiqueioatributoInformacaodaentidadePalavraparaaceitarvaloresnulos : Migration
