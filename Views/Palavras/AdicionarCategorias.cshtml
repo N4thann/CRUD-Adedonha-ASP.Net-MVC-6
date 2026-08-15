@@ -1,4 +1,4 @@
-﻿@model AdedonhaMVC.ViewsModel.PalavraViewModel
+﻿@model AdedonhaMVC.Features.Palavras.PalavraViewModel
 
 <section class="content-header">
     <div class="container-fluid">
@@ -47,7 +47,7 @@
                         <tbody>
                         @foreach (var item in Model.CategoriasDisponiveis)
                         {
-                              <form asp-action="SalvarCategorias">
+                              <form asp-action="SalvarCategorias" method="post">
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <input type="hidden" asp-for="Id" />
                                  <tr>
@@ -97,7 +97,7 @@
                         <tbody>
                         @foreach (var item in Model.Categorias)
                         {
-                            <form asp-action="RemoverCategorias">
+                            <form asp-action="RemoverCategorias" method="post">
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <input type="hidden" asp-for="Id" />
                                 <tr>

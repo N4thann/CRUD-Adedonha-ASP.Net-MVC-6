@@ -1,4 +1,4 @@
-﻿@model AdedonhaMVC.Models.Categoria
+﻿@model AdedonhaMVC.Features.Categorias.Categoria
 
 <section class="content-header">
     <div class="container-fluid">
@@ -334,6 +334,34 @@
                                 <i class="fas fa-eye"></i>
                             </div>
                             <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=V" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>W</h3>
+
+                                <p>Nº de palavras: @ViewBag.Soma_W</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=W" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>X</h3>
+
+                                <p>Nº de palavras: @ViewBag.Soma_X</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <a href="/Categorias/PalavrasPorLetra?id=@Model.Id&letra=X" class="small-box-footer">Palavras <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
 
