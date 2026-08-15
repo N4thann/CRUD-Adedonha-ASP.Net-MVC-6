@@ -1,4 +1,5 @@
-using AdedonhaMVC.Data;
+using AdedonhaMVC.Common.Data;
+using AdedonhaMVC.Common.Data.Seed;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,5 +30,20 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+using (var seedScope = app.Services.CreateScope())
+{
+    var context = seedScope.ServiceProvider.GetRequiredService<Contexto>();
+    var csvPath = Path.Combine(AppContext.BaseDirectory, "Common", "Data", "Seed", "adedonha_palavras.csv");
+
+    if (File.Exists(csvPath))
+    {
+        await CsvPalavraSeeder.SeedAsync(context, csvPath);
+    }
+    else
+    {
+        app.Logger.LogWarning("Arquivo de seed não encontrado em {CsvPath}; seed ignorado.", csvPath);
+    }
+}
 
 app.Run();
